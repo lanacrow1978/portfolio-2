@@ -316,6 +316,7 @@ li, ul {
 
 .menu-link {
     text-decoration: none;
+    text-transform: uppercase;
     font-size: 1.3rem;
     color: white;
     padding: 5% 0;
