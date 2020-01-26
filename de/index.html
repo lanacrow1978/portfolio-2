@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../icon.png">
   <!-- Place favicon.ico in the root directory -->
     
-    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Open+Sans:400,600,700|Open+Sans+Condensed:300|Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Open+Sans:300,400,600,700|Open+Sans+Condensed:300|Share+Tech+Mono&display=swap" rel="stylesheet">
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
@@ -103,38 +103,40 @@
   <!-- Add your site or application content here -->
     
 
-<header>
-    
-    <nav role="navigation">
-   
-       <ul>
-           <li id="language" class="dropdown"><a href="#" class="lang">DE <i class="fa fa-caret-down"></i></a>
-           <ul id="lang-dropdown-content" class="dropdown-content">
-               <li class="lang-nav-item"><a href="../index.html">EN</a></li>   
-               <li class="lang-nav-item"><a href="../fr/index.html">FR</a></li>   
-               <li class="lang-nav-item"><a href="../ru/index.html">РУ</a></li>      
-           </ul>
-        </li>
+<header class="header">
+    <div class="dropdown">
+        <span id="language">DE <i class="fa fa-caret-down"></i></span>
+           <div class="dropdown-content">
+               <a class="lang-link" href="../index.html">EN</a> 
+               <a class="lang-link" href="../fr/index.html">FR</a>  
+               <a class="lang-link" href="../ru/index.html">РУ</a>     
+           </div>
+        </div>
            
-        <li id="menu" class="dropdown"><i class="fa fa-bars"></i>
-            <ul id="menu-dropdown-content" class="dropdown-content">
-                <li><a class="menu-link" href="#portfolio">Portfolio</a></li>   
-                <li><a class="menu-link" href="#about">Über&nbsp;mich</a></li>
-                <li><a class="menu-link" href="#skills">Leistungen</a></li>
-                <li><a class="menu-link" href="#testimonials">Referenzen</a></li>
-                <li><a class="menu-link" href="#contact">Kontakt</a></li>
-            </ul>
-         </li> 
-        </ul>
-    </nav>
+        <span class="hamburger" onclick="openNav()">&#9776;</span>
+      <div id="mySidenav" class="sidenav">  
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a class="menu-link" href="#portfolio">Portfolio</a>  
+                <a class="menu-link" href="#about">Über&nbsp;mich</a>
+                <a class="menu-link" href="#skills">Leistungen</a>
+                <a class="menu-link" href="#testimonials">Referenzen</a>
+                <a class="menu-link" href="#contact">Kontakt</a>
+        </div>
+   
 </header> 
      
 <main> 
     
     <section id="intro"> 
-        <div class="max-container"> 
+        <div class="max-container">
+            
+            <figure id="gradient">
+                <img src="../img/gradient-effect.png" alt="Hintergrund">
+            </figure>
+    
+            
         
-            <div id="name">
+            <div id="name-and-title">
                 <h1 class="title">UX-, Webdesign und Webentwicklung</h1>
                 <h2 class="my-name"><span>LANA</span> CROW</h2>
             </div>
@@ -143,12 +145,7 @@
                 <img src="../img/face.gif" alt="Das Porträt">
             </figure>
         
-            <figure id="gradient">
-                <img src="../img/gradient-effect.png" alt="Hintergrund">
-            </figure>
-    
-    
-
+ 
     
         <div class="star-1 stars"></div>
         <div class="star-2 stars"></div>
@@ -184,7 +181,7 @@
                 die es liebt,Ihre Vision in<br>einem sauberen Code wiederzugeben
                 </span>
                 <br>
-                <span style="font-size: 0.8em; color: black;"> &lt;fließendes Haar völlig optional!  <i class="far fa-laugh-wink fa-spin"></i>  &gt;</span></p>
+                <span style="font-size: 0.8em;"> &lt;fließendes Haar völlig optional!  <i class="far fa-laugh-wink fa-spin"></i>  &gt;</span></p>
         </div>
         
     
@@ -241,7 +238,7 @@
         </div>  
      </div>
     </div>
-        <a href="#" class="back-to-top">&#8892;</a>
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     </section>
     
     <section id="about">
@@ -327,15 +324,16 @@
         <h2>Referenzen</h2>
         <div id="reviews">
             <article>
-                <p>“Von der Arbeit die Lana geleistet hat, bin ich absolut begeistert. Sie recherchierte und kommunizierte die unterschiedlichen Optionen sehr schnell und klar und beendete ihre Arbeit innerhalb des vorgegebenen Budgets ab. Ich werde sie daher auf jeden Fall nochmal anfragen.”<br/><em>Jo W.</em></p>
+                <p class="review">“Von der Arbeit die Lana geleistet hat, bin ich absolut begeistert. Sie recherchierte und kommunizierte die unterschiedlichen Optionen sehr schnell und klar und beendete ihre Arbeit innerhalb des vorgegebenen Budgets ab. Ich werde sie daher auf jeden Fall nochmal anfragen.”<p class="reviewer-name">Jo W.</p>
  
             </article>
             <article>
-                <p>"Ich vertraute Lana meine Webseite bei dem Entwurf und bei dessen umsetzen an, ohne selbst zu wissen was ich tatsächlich brauche. Um die Grundwerte und die positiven Aspekte meines Geschäfts zu fördern, untersuchte Lana die komplette Branche und wählte die Informationen aus, die für die größtmögliche Auswirkung erforderlich sind. Mit dem Stil und den Farben bin ich sehr zufrieden, die Seite ist simpel und dezent gestaltet, sodass eine schnelle Navigation möglich ist. Ich bin eine sehr zufriedene Kundin."<br/><em>Julie W.</em></p>
+                <p class="review">"Ich vertraute Lana meine Webseite bei dem Entwurf und bei dessen umsetzen an, ohne selbst zu wissen was ich tatsächlich brauche. Um die Grundwerte und die positiven Aspekte meines Geschäfts zu fördern, untersuchte Lana die komplette Branche und wählte die Informationen aus, die für die größtmögliche Auswirkung erforderlich sind. Mit dem Stil und den Farben bin ich sehr zufrieden, die Seite ist simpel und dezent gestaltet, sodass eine schnelle Navigation möglich ist. Ich bin eine sehr zufriedene Kundin."</p>
+                  <p class="reviewer-name">Julie W.</p>
     
             </article>
             <article>
-                <p>"Ich habe bereits mehrmals mit Lana gearbeitet, um ihr mit unserer Webseite auszuhelfen, sie hat sich als sehr reaktionsschnell, verständnisvoll und effizient erwiesen. Sie geht dem Problem schnell auf den Grund und ist in der Lage, zeitnahe eine Lösung zu liefern. Fantastisch!! Ich kann ihre Arbeit auf jeden Fall sehr empfehlen."<br/><em>Simon C.</em></p>
+                <p class="review">"Ich habe bereits mehrmals mit Lana gearbeitet, um ihr mit unserer Webseite auszuhelfen, sie hat sich als sehr reaktionsschnell, verständnisvoll und effizient erwiesen. Sie geht dem Problem schnell auf den Grund und ist in der Lage, zeitnahe eine Lösung zu liefern. Fantastisch!! Ich kann ihre Arbeit auf jeden Fall sehr empfehlen."<p class="reviewer-name">Simon C.</p>
     
             </article>
         </div>

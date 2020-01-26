@@ -27,7 +27,7 @@
   <link rel="apple-touch-icon" href="../icon.png">
   <!-- Place favicon.ico in the root directory -->
      
-    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Open+Sans:400,600,700|Open+Sans+Condensed:300|Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nova+Mono|Open+Sans:300,400,600,700|Open+Sans+Condensed:300|Share+Tech+Mono&display=swap" rel="stylesheet">
 
       
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
@@ -102,30 +102,28 @@
   <!-- Add your site or application content here -->
     
 
-   <header>
+   <header class="header">
     
-    <nav role="navigation">
-   
-       <ul>
-           <li id="language" class="dropdown"><a href="#" class="lang">РУ <i class="fa fa-caret-down"></i></a>
-           <ul id="lang-dropdown-content" class="dropdown-content">
-               <li class="lang-nav-item"><a href="../index.html">EN</a></li>   
-               <li class="lang-nav-item"><a href="../fr/index.html">FR</a></li>   
-               <li class="lang-nav-item"><a href="../de/index.html">DE</a></li>      
-           </ul>
-        </li>
+    <div class="dropdown">
+        <span id="language">РУ <i class="fa fa-caret-down"></i></span>
+           <div class="dropdown-content">
+               <a class="lang-link" href="../index.html">EN</a>   
+               <a class="lang-link" href="../fr/index.html">FR</a>  
+               <a class="lang-link" href="../de/index.html">DE</a>     
+            </div>
+    </div>
            
-        <li id="menu" class="dropdown"><i class="fa fa-bars"></i>
-            <ul id="menu-dropdown-content" class="dropdown-content">
-                <li><a class="menu-link" href="#portfolio">Портфолио</a></li>   
-                <li><a class="menu-link" href="#about">Обо&nbsp;мне</a></li>
-                <li><a class="menu-link" href="#skills">Cпециализации</a></li>
-                <li><a class="menu-link" href="#testimonials">Oтзывы</a></li>
-                <li><a class="menu-link" href="#contact">Kонтакт</a></li>
-            </ul>
-         </li> 
-        </ul>
-       </nav>
+    <span class="hamburger" onclick="openNav()">&#9776;</span>
+      <div id="mySidenav" class="sidenav">  
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a class="menu-link" href="#portfolio">Портфолио</a>  
+                <a class="menu-link" href="#about">Обо&nbsp;мне</a>
+                <a class="menu-link" href="#skills">Cпециализации</a>
+                <a class="menu-link" href="#testimonials">Oтзывы</a>
+                <a class="menu-link" href="#contact">Kонтакт</a>
+            
+       </div>
+      
 </header> 
  
        
@@ -133,8 +131,13 @@
     
 <section id="intro">
     <div class="max-container"> 
+        
+        <figure id="gradient">
+            <img src="../img/gradient-effect.png" alt="gradient background">
+        </figure>
+    
 
-        <div id="name">
+        <div id="name-and-title">
             <h1 class="title">UX, веб-дизайн и разработкa</h1>
             <h2 class="my-name"><span>Светлана</span> Кроу</h2>
         </div>
@@ -143,11 +146,7 @@
             <img src="../img/face.gif" alt="face">
         </figure>
     
-        <figure id="gradient">
-            <img src="../img/gradient-effect.png" alt="gradient background">
-        </figure>
-    
-    
+   
 
         <div class="star-1 stars"></div>
         <div class="star-2 stars"></div>
@@ -245,7 +244,7 @@
         </div>  
      </div>
     </div>
-        <a href="#" class="back-to-top">&#8892;</a>
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
     </section>
     
      <section id="about">
@@ -333,15 +332,17 @@
         <h2>Oтзывы</h2>
         <div id="reviews">
             <article>
-                <p>“Я осталась очень довольна работой Светланы. Она собрала всю информацию и проинформировала мои опции четко и без задержек, и выполнила заказ в пределах бюджета.”<br/><em>Jo W.</em></p>
+                <p class="review">“Я осталась очень довольна работой Светланы. Она собрала всю информацию и проинформировала мои опции четко и без задержек, и выполнила заказ в пределах бюджета.”</p>
+                <p class="reviewer-name">Jo W.</p>
             </article>
             
             <article>
-                <p>Я доверила Светлане всю работу по созданию моего сайта: как дизайн так и разработку, так как я сама не имела большого представления, чего я от моего сайта хотела. Светлана собрала информацию по моей индустрии и на сайте выделила ценности и достоинства моего бизнеса. Мне очень понравилась цветовая гамма и стиль, сайт достаточно прост для быстрой навигации и не перегружен деталями. Я очень довольна ее работой.<br/><em>Julie W.</em></p>
+                <p class="review">Я доверила Светлане всю работу по созданию моего сайта: как дизайн так и разработку, так как я сама не имела большого представления, чего я от моего сайта хотела. Светлана собрала информацию по моей индустрии и на сайте выделила ценности и достоинства моего бизнеса. Мне очень понравилась цветовая гамма и стиль, сайт достаточно прост для быстрой навигации и не перегружен деталями. Я очень довольна ее работой.</p>
+                <p class="reviewer-name">Julie W.</p>
     
             </article>
             <article>
-                <p>"Светлана мне неоднократно помогала с моим сайтом и всегда демонстрировала понимание моих требований и знание своего дела. Она всегда добирается до корня проблемы и вовремя решает мои вопросы. Изумительно! Я рекомендую ее работу."<br/><em>Simon C.</em></p>
+                <p class="review">"Светлана мне неоднократно помогала с моим сайтом и всегда демонстрировала понимание моих требований и знание своего дела. Она всегда добирается до корня проблемы и вовремя решает мои вопросы. Изумительно! Я рекомендую ее работу."</p><p class="reviewer-name">Simon C.</p>
     
             </article>
         </div>
